@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B1F7F39B237FF59500929800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7F39A237FF59500929800 /* AppDelegate.swift */; };
-		B1F7F39D237FF59500929800 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7F39C237FF59500929800 /* ViewController.swift */; };
 		B1F7F3A2237FF59800929800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F7F3A1237FF59800929800 /* Assets.xcassets */; };
 		B1F7F3A5237FF59800929800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F7F3A3237FF59800929800 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -16,7 +15,6 @@
 /* Begin PBXFileReference section */
 		B1F7F397237FF59500929800 /* SberbankStepUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SberbankStepUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F7F39A237FF59500929800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B1F7F39C237FF59500929800 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1F7F3A1237FF59800929800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1F7F3A4237FF59800929800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1F7F3A6237FF59800929800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,9 +31,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78AFBDBB237FF7A900E8C117 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		B1F7F38E237FF59500929800 = {
 			isa = PBXGroup;
 			children = (
+				78AFBDBB237FF7A900E8C117 /* Screens */,
+				B1F7F3A1237FF59800929800 /* Assets.xcassets */,
 				B1F7F399237FF59500929800 /* SberbankStepUp */,
 				B1F7F398237FF59500929800 /* Products */,
 			);
@@ -53,8 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				B1F7F39A237FF59500929800 /* AppDelegate.swift */,
-				B1F7F39C237FF59500929800 /* ViewController.swift */,
-				B1F7F3A1237FF59800929800 /* Assets.xcassets */,
 				B1F7F3A3237FF59800929800 /* LaunchScreen.storyboard */,
 				B1F7F3A6237FF59800929800 /* Info.plist */,
 			);
@@ -131,7 +136,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1F7F39D237FF59500929800 /* ViewController.swift in Sources */,
 				B1F7F39B237FF59500929800 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +283,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mooduck.SberbankStepUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -296,7 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mooduck.SberbankStepUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
