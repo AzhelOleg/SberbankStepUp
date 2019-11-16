@@ -53,23 +53,22 @@ public final class CurrencyManager {
             }
             analyticStruct.currency = currency.rawValue
             // difference
-            if index != 0 {
-                let earlyAnalyticStruct = analyticSegmentList[index]
+            if index > 0 {
+                let earlyAnalyticStruct = analyticSegmentList[index - 1]
                 
                 if earlyAnalyticStruct.money > analyticStruct.money {
-                    analyticSegmentList[index].conclusion = .rise
-                    analyticSegmentList[index].difference = ((earlyAnalyticStruct.money - analyticStruct.money)
-                                                                                    / earlyAnalyticStruct.money) * 100
+                    analyticSegmentList[index - 1].conclusion = .rise
+                    analyticSegmentList[index - 1].difference = abs(((earlyAnalyticStruct.money - analyticStruct.money)
+                                                                                    / earlyAnalyticStruct.money) * 100)
                 }
                 else if earlyAnalyticStruct.money < analyticStruct.money {
-                    analyticSegmentList[index].conclusion = .drop
-                    analyticSegmentList[index].difference = ((earlyAnalyticStruct.money - analyticStruct.money)
-                                                                                    / earlyAnalyticStruct.money) * 100
+                    analyticSegmentList[index - 1].conclusion = .drop
+                    analyticSegmentList[index - 1].difference = abs(((earlyAnalyticStruct.money - analyticStruct.money)
+                                                                                    / earlyAnalyticStruct.money) * 100)
                 }
                 else { analyticSegmentList[index].conclusion = .stability }
-                
-                index += 1
             }
+            index += 1
             // append
             analyticSegmentList.append(analyticStruct)
         }
