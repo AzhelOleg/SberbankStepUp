@@ -12,19 +12,21 @@ public final class LoginViewController: UIViewController {
 
     let logo = UIImageView(image: UIImage(named: "sberlogo"))
     
-    let loginInput = UITextField(frame: CGRect(x: 0, y: 0, width: 120, height: 50))
-    let passInput = UITextField(frame: CGRect(x: 0, y: 0, width: 120, height: 50))
+    let loginInput = UITextField(frame: CGRect(x: 0, y: 0, width: 160, height: 30))
+    let passInput = UITextField(frame: CGRect(x: 0, y: 0, width: 160, height: 30))
     
     var button: UIButton!
     
+    let gradient = GradientView()
+    
     @objc
     func login() {
-        UIView.animate(withDuration: 0.6,
+        UIView.animate(withDuration: 0.4,
                        animations: {
                         self.button.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
         },
                        completion: { _ in
-                        UIView.animate(withDuration: 0.6) {
+                        UIView.animate(withDuration: 0.4) {
                             self.button.transform = CGAffineTransform.identity
                         }
         })
@@ -51,8 +53,13 @@ public final class LoginViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         title = "Login"
+        view.backgroundColor = .clear
+        gradient.update()
+        let backgroundLayer = gradient.gradientLayer
+        backgroundLayer.frame = view.frame
+        view.layer.insertSublayer(backgroundLayer, at: 0)
         
-        button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+        button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 35))
         button.center = view.center
         button.center.y += 300
         button.layer.cornerRadius = 20
@@ -70,8 +77,8 @@ public final class LoginViewController: UIViewController {
         loginInput.center = view.center
         passInput.center = view.center
         
-        loginInput.center.y -= 150
-        passInput.center.y -= 90
+        loginInput.center.y += 120
+        passInput.center.y += 170
         
 
         loginInput.borderStyle = .roundedRect
@@ -82,6 +89,9 @@ public final class LoginViewController: UIViewController {
         
         loginInput.textAlignment = .center
         passInput.textAlignment = .center
+        
+        loginInput.placeholder = "Enter login"
+        passInput.placeholder = "Enter password"
         
         loginInput.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         passInput.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -107,3 +117,26 @@ public final class LoginViewController: UIViewController {
     }
 }
 
+
+final class GradientView: UIView {
+    override class var layerClass: AnyClass {
+        return CAGradientLayer.self
+    }
+    
+    var gradientLayer: CAGradientLayer {
+        return layer as? CAGradientLayer ?? CAGradientLayer()
+    }
+    
+    func update() {
+        let colorBottom = UIColor(red: 0.0 / 255.0, green: 213.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
+        let colorTop = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    
+        gradientLayer.colors = [colorBottom, colorTop].compactMap{ $0.cgColor }
+        gradientLayer.locations = [0.0, 1.0]
+        
+    }
+    
+    //    required init?(coder aDecoder: NSCoder) {
+    //        fatalError("init(coder:) has not been implemented")
+    //    }
+}
