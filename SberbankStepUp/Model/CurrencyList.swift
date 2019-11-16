@@ -10,7 +10,7 @@ import Foundation
 
 public struct CurrencyList {
     
-    public var date: String
+    public let date: String
     public var previousDate: String
     public var list: [Currency] = []
     

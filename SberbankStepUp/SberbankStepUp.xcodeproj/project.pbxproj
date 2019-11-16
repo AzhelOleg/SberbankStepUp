@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7821384423804A0E002E3FD5 /* AnalyticStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7821384323804A0E002E3FD5 /* AnalyticStruct.swift */; };
 		78AFBDBE237FF8DD00E8C117 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDBD237FF8DD00E8C117 /* Server.swift */; };
 		78AFBDC0237FFBC500E8C117 /* CBR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDBF237FFBC500E8C117 /* CBR.swift */; };
 		78AFBDC3237FFE7400E8C117 /* CurrencyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDC2237FFE7400E8C117 /* CurrencyDTO.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7821384323804A0E002E3FD5 /* AnalyticStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticStruct.swift; sourceTree = "<group>"; };
 		78AFBDBD237FF8DD00E8C117 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		78AFBDBF237FFBC500E8C117 /* CBR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBR.swift; sourceTree = "<group>"; };
 		78AFBDC2237FFE7400E8C117 /* CurrencyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDTO.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				78AFBDD72380127800E8C117 /* User.swift */,
 				78AFBDC72380028000E8C117 /* Currency.swift */,
 				78AFBDC92380028D00E8C117 /* CurrencyList.swift */,
+				7821384323804A0E002E3FD5 /* AnalyticStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				78AFBDD523800F7300E8C117 /* CurrencyListUpdate.swift in Sources */,
 				78AFBDBE237FF8DD00E8C117 /* Server.swift in Sources */,
 				78AFBDCA2380028D00E8C117 /* CurrencyList.swift in Sources */,
+				7821384423804A0E002E3FD5 /* AnalyticStruct.swift in Sources */,
 				78AFBDC6238001EF00E8C117 /* CurrencyListDTO.swift in Sources */,
 				78AFBDC82380028000E8C117 /* Currency.swift in Sources */,
 				B1F7F39B237FF59500929800 /* AppDelegate.swift in Sources */,
