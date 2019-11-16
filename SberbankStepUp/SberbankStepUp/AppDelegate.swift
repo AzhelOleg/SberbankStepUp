@@ -19,7 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = RootViewController()
         window?.makeKeyAndVisible()
 		//
+        
+        UserDefaults.standard.set(false, forKey: "LOGGED_IN")
+        
         return true
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        AppDelegate.shared.rootViewController.switchToTouchIdAuthScreen()
     }
 }
 
