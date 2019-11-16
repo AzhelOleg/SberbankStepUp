@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4EF948F237FFA5C00C9A712 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF948E237FFA5C00C9A712 /* RootViewController.swift */; };
 		B1F7F39B237FF59500929800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7F39A237FF59500929800 /* AppDelegate.swift */; };
 		B1F7F3A2237FF59800929800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F7F3A1237FF59800929800 /* Assets.xcassets */; };
 		B1F7F3A5237FF59800929800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F7F3A3237FF59800929800 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4EF948E237FFA5C00C9A712 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B1F7F397237FF59500929800 /* SberbankStepUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SberbankStepUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F7F39A237FF59500929800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1F7F3A1237FF59800929800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				B1F7F39A237FF59500929800 /* AppDelegate.swift */,
 				B1F7F3A3237FF59800929800 /* LaunchScreen.storyboard */,
 				B1F7F3A6237FF59800929800 /* Info.plist */,
+				A4EF948E237FFA5C00C9A712 /* RootViewController.swift */,
 			);
 			path = SberbankStepUp;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4EF948F237FFA5C00C9A712 /* RootViewController.swift in Sources */,
 				B1F7F39B237FF59500929800 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
