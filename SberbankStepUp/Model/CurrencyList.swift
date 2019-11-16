@@ -10,22 +10,22 @@ import Foundation
 
 public struct CurrencyList {
     
-    public var date: Date
-    public var previousDate: Date
+    public var date: String
+    public var previousDate: String
     public var list: [Currency] = []
     
     
     init(dto: CurrencyListDTO) {
-        date = dto.Date ?? Date.init()
-        previousDate = dto.PreviousDate ?? Date.init()
+        date = dto.Date ?? ""
+        previousDate = dto.PreviousDate ?? ""
         for currencyDTO in dto.Valute {
             list.append(Currency(dto: currencyDTO.value))
         }
     }
     
     init() {
-        date = Date.init()
-        previousDate = Date.init()
+        date = ""
+        previousDate = ""
     }
     
 }

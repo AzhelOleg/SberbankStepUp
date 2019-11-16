@@ -84,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				78AFBDC4238001D800E8C117 /* DTO */,
+				78AFBDD72380127800E8C117 /* User.swift */,
 				78AFBDC72380028000E8C117 /* Currency.swift */,
 				78AFBDC92380028D00E8C117 /* CurrencyList.swift */,
 			);
@@ -93,7 +94,6 @@
 		78AFBDC4238001D800E8C117 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				78AFBDD72380127800E8C117 /* User.swift */,
 				78AFBDC2237FFE7400E8C117 /* CurrencyDTO.swift */,
 				78AFBDC5238001EF00E8C117 /* CurrencyListDTO.swift */,
 			);

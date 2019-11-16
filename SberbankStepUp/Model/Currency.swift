@@ -17,8 +17,8 @@ public struct Currency {
     init(dto: CurrencyDTO) {
         code = dto.CharCode ?? ""
         name = dto.Name ?? ""
-        value = dto.Value ?? 0
-        previousValue = dto.Previous ?? 0
+        value = dto.Value ?? 0.0
+        previousValue = dto.Previous ?? 0.0
     }
     
 }
