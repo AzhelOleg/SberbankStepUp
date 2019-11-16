@@ -8,9 +8,9 @@
 
 import UIKit
 
-class TouchIdAuthViewController: UIViewController {
+public final class TouchIdAuthViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.title = "Touch"
         // Do any additional setup after loading the view.
@@ -22,8 +22,9 @@ class TouchIdAuthViewController: UIViewController {
         view.addSubview(label)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
     }
+    
 }

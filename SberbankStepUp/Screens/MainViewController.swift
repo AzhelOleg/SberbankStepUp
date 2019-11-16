@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+public final class MainViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.title = "Main"
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
@@ -21,8 +21,9 @@ class MainViewController: UIViewController {
     }
 
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
     }
+    
 }

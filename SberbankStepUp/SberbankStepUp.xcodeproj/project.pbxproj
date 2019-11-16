@@ -21,7 +21,6 @@
 		B15BAD3E23800CBD0079494E /* TouchIdAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */; };
 		B15BAD3F23800CBD0079494E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3A23800CBD0079494E /* LoginViewController.swift */; };
 		B15BAD4023800CBD0079494E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3B23800CBD0079494E /* ARViewController.swift */; };
-		B15BAD4123800CBD0079494E /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3C23800CBD0079494E /* SignOutViewController.swift */; };
 		B1F7F39B237FF59500929800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7F39A237FF59500929800 /* AppDelegate.swift */; };
 		B1F7F3A2237FF59800929800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F7F3A1237FF59800929800 /* Assets.xcassets */; };
 		B1F7F3A5237FF59800929800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F7F3A3237FF59800929800 /* LaunchScreen.storyboard */; };
@@ -42,7 +41,6 @@
 		B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIdAuthViewController.swift; sourceTree = "<group>"; };
 		B15BAD3A23800CBD0079494E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B15BAD3B23800CBD0079494E /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
-		B15BAD3C23800CBD0079494E /* SignOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
 		B1F7F397237FF59500929800 /* SberbankStepUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SberbankStepUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F7F39A237FF59500929800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1F7F3A1237FF59800929800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,11 +62,10 @@
 		78AFBDBB237FF7A900E8C117 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B15BAD3B23800CBD0079494E /* ARViewController.swift */,
 				B15BAD3A23800CBD0079494E /* LoginViewController.swift */,
-				B15BAD3823800CBD0079494E /* MainViewController.swift */,
-				B15BAD3C23800CBD0079494E /* SignOutViewController.swift */,
 				B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */,
+				B15BAD3823800CBD0079494E /* MainViewController.swift */,
+				B15BAD3B23800CBD0079494E /* ARViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -228,7 +225,6 @@
 				B15BAD4023800CBD0079494E /* ARViewController.swift in Sources */,
 				B15BAD3F23800CBD0079494E /* LoginViewController.swift in Sources */,
 				B15BAD3E23800CBD0079494E /* TouchIdAuthViewController.swift in Sources */,
-				B15BAD4123800CBD0079494E /* SignOutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

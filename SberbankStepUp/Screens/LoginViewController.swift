@@ -8,9 +8,9 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+public final class LoginViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.title = "Login"
         // Do any additional setup after loading the view.
@@ -24,16 +24,17 @@ class LoginViewController: UIViewController {
         view.addSubview(button)
     }
     
-    
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
     }
+    
 }
 
+
+
 extension LoginViewController {
+    
     var button: UIButton! {
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
         button.center = view.center
@@ -42,9 +43,11 @@ extension LoginViewController {
         button.addTarget(self, action: #selector(login), for: .touchUpInside)
         return button
     }
+    
     @objc
     func login() {
         UserDefaults.standard.set(true, forKey: "LOGGED_IN")
         AppDelegate.shared.rootViewController.showMainScreen()
     }
+    
 }
