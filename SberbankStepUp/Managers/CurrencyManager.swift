@@ -9,7 +9,6 @@
 import Foundation
 
 public enum Currency: String, CaseIterable {
-//    case RUB = "RUB"
     case USD = "USD"
     case EUR = "EUR"
     case CNY = "CNY"
