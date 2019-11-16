@@ -7,42 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		78AFBDBE237FF8DD00E8C117 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDBD237FF8DD00E8C117 /* Server.swift */; };
 		78AFBDC0237FFBC500E8C117 /* CBR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDBF237FFBC500E8C117 /* CBR.swift */; };
-		78AFBDC3237FFE7400E8C117 /* CurrencyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDC2237FFE7400E8C117 /* CurrencyDTO.swift */; };
-		78AFBDC6238001EF00E8C117 /* CurrencyListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDC5238001EF00E8C117 /* CurrencyListDTO.swift */; };
-		78AFBDC82380028000E8C117 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDC72380028000E8C117 /* Currency.swift */; };
-		78AFBDCA2380028D00E8C117 /* CurrencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDC92380028D00E8C117 /* CurrencyList.swift */; };
-		78AFBDD023800BF200E8C117 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDCF23800BF200E8C117 /* DataBase.swift */; };
-		78AFBDD323800C8400E8C117 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDD223800C8400E8C117 /* User.swift */; };
-		78AFBDD523800F7300E8C117 /* CurrencyListUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDD423800F7300E8C117 /* CurrencyListUpdate.swift */; };
+=======
 		A4EF948F237FFA5C00C9A712 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF948E237FFA5C00C9A712 /* RootViewController.swift */; };
-		B15BAD3D23800CBD0079494E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3823800CBD0079494E /* MainViewController.swift */; };
-		B15BAD3E23800CBD0079494E /* TouchIdAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */; };
-		B15BAD3F23800CBD0079494E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3A23800CBD0079494E /* LoginViewController.swift */; };
-		B15BAD4023800CBD0079494E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3B23800CBD0079494E /* ARViewController.swift */; };
-		B15BAD4123800CBD0079494E /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3C23800CBD0079494E /* SignOutViewController.swift */; };
+>>>>>>> 9905a1bcacde4ccf00d2bed3da56dbd5c172e347
 		B1F7F39B237FF59500929800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7F39A237FF59500929800 /* AppDelegate.swift */; };
 		B1F7F3A2237FF59800929800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F7F3A1237FF59800929800 /* Assets.xcassets */; };
 		B1F7F3A5237FF59800929800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F7F3A3237FF59800929800 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		78AFBDBD237FF8DD00E8C117 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		78AFBDBF237FFBC500E8C117 /* CBR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBR.swift; sourceTree = "<group>"; };
-		78AFBDC2237FFE7400E8C117 /* CurrencyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDTO.swift; sourceTree = "<group>"; };
-		78AFBDC5238001EF00E8C117 /* CurrencyListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListDTO.swift; sourceTree = "<group>"; };
-		78AFBDC72380028000E8C117 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		78AFBDC92380028D00E8C117 /* CurrencyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyList.swift; sourceTree = "<group>"; };
-		78AFBDCF23800BF200E8C117 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
-		78AFBDD223800C8400E8C117 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		78AFBDD423800F7300E8C117 /* CurrencyListUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListUpdate.swift; sourceTree = "<group>"; };
+=======
 		A4EF948E237FFA5C00C9A712 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		B15BAD3823800CBD0079494E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIdAuthViewController.swift; sourceTree = "<group>"; };
-		B15BAD3A23800CBD0079494E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		B15BAD3B23800CBD0079494E /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
-		B15BAD3C23800CBD0079494E /* SignOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
+>>>>>>> 9905a1bcacde4ccf00d2bed3da56dbd5c172e347
 		B1F7F397237FF59500929800 /* SberbankStepUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SberbankStepUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F7F39A237FF59500929800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1F7F3A1237FF59800929800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,11 +46,6 @@
 		78AFBDBB237FF7A900E8C117 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B15BAD3B23800CBD0079494E /* ARViewController.swift */,
-				B15BAD3A23800CBD0079494E /* LoginViewController.swift */,
-				B15BAD3823800CBD0079494E /* MainViewController.swift */,
-				B15BAD3C23800CBD0079494E /* SignOutViewController.swift */,
-				B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -76,48 +53,17 @@
 		78AFBDBC237FF89E00E8C117 /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				78AFBDCF23800BF200E8C117 /* DataBase.swift */,
 				78AFBDBD237FF8DD00E8C117 /* Server.swift */,
 				78AFBDBF237FFBC500E8C117 /* CBR.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
 		};
-		78AFBDC1237FFCC100E8C117 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				78AFBDC4238001D800E8C117 /* DTO */,
-				78AFBDD223800C8400E8C117 /* User.swift */,
-				78AFBDC72380028000E8C117 /* Currency.swift */,
-				78AFBDC92380028D00E8C117 /* CurrencyList.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		78AFBDC4238001D800E8C117 /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-				78AFBDC2237FFE7400E8C117 /* CurrencyDTO.swift */,
-				78AFBDC5238001EF00E8C117 /* CurrencyListDTO.swift */,
-			);
-			path = DTO;
-			sourceTree = "<group>";
-		};
-		78AFBDD623800F7D00E8C117 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				78AFBDD423800F7300E8C117 /* CurrencyListUpdate.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		B1F7F38E237FF59500929800 = {
 			isa = PBXGroup;
 			children = (
 				78AFBDBB237FF7A900E8C117 /* Screens */,
-				78AFBDC1237FFCC100E8C117 /* Model */,
 				78AFBDBC237FF89E00E8C117 /* Server */,
-				78AFBDD623800F7D00E8C117 /* Protocols */,
 				B1F7F3A1237FF59800929800 /* Assets.xcassets */,
 				B1F7F399237FF59500929800 /* SberbankStepUp */,
 				B1F7F398237FF59500929800 /* Products */,
@@ -136,9 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				B1F7F39A237FF59500929800 /* AppDelegate.swift */,
-				A4EF948E237FFA5C00C9A712 /* RootViewController.swift */,
 				B1F7F3A3237FF59800929800 /* LaunchScreen.storyboard */,
 				B1F7F3A6237FF59800929800 /* Info.plist */,
+				A4EF948E237FFA5C00C9A712 /* RootViewController.swift */,
 			);
 			path = SberbankStepUp;
 			sourceTree = "<group>";
@@ -213,22 +159,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B15BAD3D23800CBD0079494E /* MainViewController.swift in Sources */,
-				78AFBDD023800BF200E8C117 /* DataBase.swift in Sources */,
-
-				A4EF948F237FFA5C00C9A712 /* RootViewController.swift in Sources */,
-				78AFBDC3237FFE7400E8C117 /* CurrencyDTO.swift in Sources */,
+<<<<<<< HEAD
 				78AFBDC0237FFBC500E8C117 /* CBR.swift in Sources */,
-				78AFBDD523800F7300E8C117 /* CurrencyListUpdate.swift in Sources */,
 				78AFBDBE237FF8DD00E8C117 /* Server.swift in Sources */,
-				78AFBDCA2380028D00E8C117 /* CurrencyList.swift in Sources */,
-				78AFBDC6238001EF00E8C117 /* CurrencyListDTO.swift in Sources */,
-				78AFBDC82380028000E8C117 /* Currency.swift in Sources */,
+=======
+				A4EF948F237FFA5C00C9A712 /* RootViewController.swift in Sources */,
+>>>>>>> 9905a1bcacde4ccf00d2bed3da56dbd5c172e347
 				B1F7F39B237FF59500929800 /* AppDelegate.swift in Sources */,
-				B15BAD4023800CBD0079494E /* ARViewController.swift in Sources */,
-				B15BAD3F23800CBD0079494E /* LoginViewController.swift in Sources */,
-				B15BAD3E23800CBD0079494E /* TouchIdAuthViewController.swift in Sources */,
-				B15BAD4123800CBD0079494E /* SignOutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
