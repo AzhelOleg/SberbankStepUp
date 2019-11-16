@@ -19,12 +19,31 @@ public final class LoginViewController: UIViewController {
     
     @objc
     func login() {
+        UIView.animate(withDuration: 0.6,
+                       animations: {
+                        self.button.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+        },
+                       completion: { _ in
+                        UIView.animate(withDuration: 0.6) {
+                            self.button.transform = CGAffineTransform.identity
+                        }
+        })
         // login verification goes here
         let login = loginInput.text!
         let password = passInput.text!
         let users = Server.shared.userList()
         for user in users where user.login == login && user.password == password {
             UserDefaults.standard.set(true, forKey: "LOGGED_IN")
+//            UIView.animate(withDuration: 0.7,
+//                           delay: 0.0,
+//                           options: [.curveEaseInOut, .repeat, .autoreverse],
+//                           animations: {
+//                                self.button.transform = CGAffineTransform(scaleX: 2.0, y: 0)
+//            },
+//                           completion: { _ in
+//
+//            })
+
             AppDelegate.shared.rootViewController.showMainScreen()
         }
     }

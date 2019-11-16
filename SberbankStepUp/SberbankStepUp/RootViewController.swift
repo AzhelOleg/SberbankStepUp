@@ -38,11 +38,12 @@ final class RootViewController: UIViewController {
         view.addSubview(new.view)
         new.didMove(toParent: self)
         //
-        current.willMove(toParent: nil)
-        current.view.removeFromSuperview()
-        current.removeFromParent()
-        //
-        current = new
+//        current.willMove(toParent: nil)
+//        current.view.removeFromSuperview()
+//        current.removeFromParent()
+//        //
+//        current = new
+        animateFadeTransition(to: new)
     }
     
     public func switchToTouchIdAuthScreen() {
