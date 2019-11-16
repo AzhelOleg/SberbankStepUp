@@ -50,6 +50,10 @@ final class RootViewController: UIViewController {
         animateFadeTransition(to: TouchIdAuthViewController())
     }
     
+    public func switchToLoginScreen() {
+        animateFadeTransition(to: LoginViewController())
+    }
+    
 
     private func animateFadeTransition(to new: UIViewController, completion: (() -> Void)? = nil) {
         current.willMove(toParent: nil)

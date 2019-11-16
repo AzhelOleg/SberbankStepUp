@@ -12,14 +12,15 @@ public final class TouchIdAuthViewController: UIViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.title = "Touch"
-        // Do any additional setup after loading the view.
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
-        label.center = view.center
-        label.center.y -= 200
-        label.text = "TouchId screen"
+        view.backgroundColor = .clear
         
-        view.addSubview(label)
+        title = "Touch Id Login"
+        
+        let gradient = GradientView()
+        gradient.update()
+        let backgroundLayer = gradient.gradientLayer
+        backgroundLayer.frame = view.frame
+        view.layer.insertSublayer(backgroundLayer, at: 0)
     }
     
     override public func viewWillAppear(_ animated: Bool) {

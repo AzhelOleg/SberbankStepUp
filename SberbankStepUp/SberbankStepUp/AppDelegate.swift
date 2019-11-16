@@ -26,7 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
-        AppDelegate.shared.rootViewController.switchToTouchIdAuthScreen()
+        let loggedIn = UserDefaults.standard.bool(forKey: "LOGGED_IN")
+        if loggedIn {
+            AppDelegate.shared.rootViewController.switchToTouchIdAuthScreen()
+        }
+        AppDelegate.shared.rootViewController.switchToLoginScreen()
     }
     
 }
