@@ -8,14 +8,11 @@
 
 import Foundation
 
-public enum Currency: String {
-    case RUB
-    case USD
-    case EUR
-    case CNY
+public enum Currency: String, CaseIterable {
+    case USD = "USD"
+    case EUR = "EUR"
+    case CNY = "CNY"
 }
-
-
 
 // MARK: - Class
 public final class CurrencyManager {

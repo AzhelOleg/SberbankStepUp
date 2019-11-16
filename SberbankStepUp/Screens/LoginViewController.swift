@@ -61,9 +61,10 @@ public final class LoginViewController: UIViewController {
         
         button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 35))
         button.center = view.center
+		button.backgroundColor = .red
         button.center.y += 300
         button.layer.cornerRadius = 20
-        button.backgroundColor = .green
+		button.backgroundColor = UIColor.sberColor
         button.isHidden = true
         button.setTitle("Login", for: .normal)
         button.addTarget(self, action: #selector(login), for: .touchUpInside)
