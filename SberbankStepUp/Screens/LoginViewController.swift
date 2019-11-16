@@ -48,6 +48,7 @@ extension LoginViewController {
     func login() {
         UserDefaults.standard.set(true, forKey: "LOGGED_IN")
         AppDelegate.shared.rootViewController.showMainScreen()
+        CurrencyManager.shared.getAnalyticSegmentList(for: 500, currency: .USD)
     }
     
 }

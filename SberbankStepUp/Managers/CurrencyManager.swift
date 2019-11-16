@@ -8,6 +8,16 @@
 
 import Foundation
 
+public enum Currency: String {
+    case RUB
+    case USD
+    case EUR
+    case CNY
+}
+
+
+
+// MARK: - Class
 public final class CurrencyManager {
     
     public static let shared = CurrencyManager()
@@ -24,6 +34,50 @@ public final class CurrencyManager {
         Server.shared.updateCurrencySegment()
     }
     
+    public func getAnalyticSegmentList(for money: Int, currency: Currency) -> [AnalyticStruct] {
+        var analyticSegmentList: [AnalyticStruct] = []
+        
+        var index = 0
+        for currencyList in currencySegment {
+            var analyticStruct = AnalyticStruct()
+            // date
+            let date = Date.currencyListDate(from: currencyList.date)
+            if let _date = date {
+                analyticStruct.year = Date.currencyListDateYear(from: _date)
+                analyticStruct.month = Date.currencyListDateMonth(from: _date)
+            }
+            // money
+            let currencyRate = currencyList.rates[currency.rawValue]
+            if let _currencyRate = currencyRate {
+                analyticStruct.money = Float(Double(money) / _currencyRate)
+            }
+            analyticStruct.currency = currency.rawValue
+            // difference
+            if index != 0 {
+                let earlyAnalyticStruct = analyticSegmentList[index]
+                
+                if earlyAnalyticStruct.money > analyticStruct.money {
+                    analyticSegmentList[index].conclusion = .rise
+                    analyticSegmentList[index].difference = ((earlyAnalyticStruct.money - analyticStruct.money)
+                                                                                    / earlyAnalyticStruct.money) * 100
+                }
+                else if earlyAnalyticStruct.money < analyticStruct.money {
+                    analyticSegmentList[index].conclusion = .drop
+                    analyticSegmentList[index].difference = ((earlyAnalyticStruct.money - analyticStruct.money)
+                                                                                    / earlyAnalyticStruct.money) * 100
+                }
+                else { analyticSegmentList[index].conclusion = .stability }
+                
+                index += 1
+            }
+            // append
+            analyticSegmentList.append(analyticStruct)
+        }
+        
+        analyticSegmentList.reverse()
+        return analyticSegmentList
+    }
+    
 }
 
 
@@ -33,6 +87,7 @@ extension CurrencyManager: CurrencySegmentUpdate {
     
     func updateCurrencySegment(with list: CurrencyList) {
         currencySegment.append(list)
+        currencySegment = currencySegment.sorted { $0.id < $1.id }
     }
     
 }

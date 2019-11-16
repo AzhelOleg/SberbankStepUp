@@ -8,6 +8,7 @@
 
 public struct CurrencyList {
     
+    public var id: Int = 0
     public var base: String
     public var date: String
     public var rates: [String: Double] = [:]

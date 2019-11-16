@@ -14,12 +14,14 @@ public enum AnaliticConclusion {
 
 
 
+// MARK: - Struct
 public struct AnalyticStruct {
     
-    public var year: String
-    public var month: String
-    public var money: Float
-    public var currency: String
+    public var year: String = ""
+    public var month: String = ""
+    public var money: Float = 0.0
+    public var currency: String = ""
+    public var difference: Float = 0.0
     public var conclusion: AnaliticConclusion = .stability
     
 }

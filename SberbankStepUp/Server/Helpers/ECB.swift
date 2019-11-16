@@ -29,11 +29,15 @@ public final class ECB {
         let dateSegment = Date.segment()
         let session = URLSession.shared
         
+        var index = 0
         for date in dateSegment {
+            let i = index
+            index += 1
             let getListTask = session.dataTask(with: self.currencyListRequest(for: date)) { (data, response, error) in
                 do {
                     let list = try JSONDecoder().decode(CurrencyListDTO.self, from: data!)
-                    let currencyList = CurrencyList(dto: list)
+                    var currencyList = CurrencyList(dto: list)
+                    currencyList.id = i
                     self.delegate.updateCurrencySegment(with: currencyList)
                 }
                 catch {
