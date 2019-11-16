@@ -9,10 +9,14 @@
 public struct User {
     
     public var name: String
+    public var login: String
+    public var password: String
     
     
     init(name: String) {
         self.name = name
+        self.login = name
+        self.password = "123"
     }
     
 }

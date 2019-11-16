@@ -6,26 +6,23 @@
 //  Copyright © 2019 jorge. All rights reserved.
 //
 
-import Foundation
-
 public struct CurrencyList {
     
-    public var date: Date
-    public var previousDate: Date
-    public var list: [Currency] = []
+    public var id: Int = 0
+    public var base: String
+    public var date: String
+    public var rates: [String: Double] = [:]
     
     
     init(dto: CurrencyListDTO) {
-        date = dto.Date ?? Date.init()
-        previousDate = dto.PreviousDate ?? Date.init()
-        for currencyDTO in dto.Valute {
-            list.append(Currency(dto: currencyDTO.value))
-        }
+        base = dto.base ?? ""
+        date = dto.date ?? ""
+        rates = dto.rates ?? [:]
     }
     
     init() {
-        date = Date.init()
-        previousDate = Date.init()
+        base = ""
+        date = ""
     }
     
 }

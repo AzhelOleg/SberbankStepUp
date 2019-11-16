@@ -10,8 +10,8 @@ import Foundation
 
 public struct CurrencyListDTO: Decodable {
     
-    public var Date: Date?
-    public var PreviousDate: Date?
-    public var Valute: [String: CurrencyDTO]
+    public var base: String?
+    public var date: String?
+    public var rates: [String: Double]?
     
 }
