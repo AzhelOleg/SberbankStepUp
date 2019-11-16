@@ -20,7 +20,10 @@ public final class LoginViewController: UIViewController {
     @objc
     func login() {
         // login verification goes here
-        if loginInput.text == "Admin" && passInput.text == "Admin" {
+        let login = loginInput.text!
+        let password = passInput.text!
+        let users = Server.shared.userList()
+        for user in users where user.login == login && user.password == password {
             UserDefaults.standard.set(true, forKey: "LOGGED_IN")
             AppDelegate.shared.rootViewController.showMainScreen()
         }
