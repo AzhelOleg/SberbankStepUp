@@ -144,7 +144,21 @@ extension MainViewController {
 extension MainViewController {
 	@objc
 	private func logoutSelector() {
-		AppDelegate.shared.rootViewController.switchToTouchIdAuthScreen()
+        
+        let alert = UIAlertController(title: "Logging out", message: "Are you sure you'd like to log out?", preferredStyle: .alert)
+        
+        let logout = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction) in
+            AppDelegate.shared.rootViewController.switchToTouchIdAuthScreen()
+        }
+
+        let stay = UIAlertAction(title: "No", style: .default) { (action:UIAlertAction) in
+            
+        }
+        
+        alert.addAction(logout)
+        alert.addAction(stay)
+        
+        self.present(alert, animated: true, completion: nil)
 	}
 	
 	@objc
