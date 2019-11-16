@@ -13,7 +13,7 @@ final class RootViewController: UIViewController {
     private var current: UIViewController
     
     init() {
-        self.current = WelcomeViewController()
+        self.current = LoginViewController()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -31,9 +31,8 @@ final class RootViewController: UIViewController {
         current.didMove(toParent: self)
     }
     
-    public func showLoginScreen() {
-        let new = UINavigationController(rootViewController: LoginViewController())
-        
+    public func showMainScreen() {
+        let new = UINavigationController(rootViewController: MainViewController())
         addChild(new)
         new.view.frame = view.bounds
         view.addSubview(new.view)
@@ -46,13 +45,8 @@ final class RootViewController: UIViewController {
         current = new
     }
     
-    public func switchToMainScreen() {
-        animateFadeTransition(to: MyTabBarController())
-    }
-    
-    public func switchToLogout() {
-        let logoutScreen = UINavigationController(rootViewController: LoginViewController())
-        animateDismissTransition(to: logoutScreen)
+    public func switchToTouchIdAuthScreen() {
+        animateFadeTransition(to: TouchIdAuthViewController())
     }
     
 
