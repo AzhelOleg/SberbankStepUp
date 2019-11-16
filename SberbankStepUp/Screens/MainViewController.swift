@@ -163,8 +163,16 @@ extension MainViewController {
 	
 	@objc
 	private func calculateSelector() {
+		if valueTextField.text!.count == 0 {
+			return
+		}
 		view.addSubview(indicator)
+
 		let values = CurrencyManager.shared.getAnalyticSegmentList(for: Float(valueTextField.text!)!, currency: Currency.allCases[picker.selectedRow(inComponent: 0)])
+		let collection = CollectionViewScreen(with: values)
+		collection.modalTransitionStyle = .coverVertical
+		collection.modalPresentationStyle = .overCurrentContext
+		self.navigationController?.pushViewController(collection, animated: true)
 		indicator.removeFromSuperview()
 	}
 }

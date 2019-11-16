@@ -17,6 +17,8 @@
 		78AFBDD023800BF200E8C117 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDCF23800BF200E8C117 /* DataBase.swift */; };
 		78AFBDD523800F7300E8C117 /* CurrencyListUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDD423800F7300E8C117 /* CurrencyListUpdate.swift */; };
 		78AFBDD82380127900E8C117 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDD72380127800E8C117 /* User.swift */; };
+		A4C1FB542380A6F6002C2CE2 /* CollectioViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1FB532380A6F6002C2CE2 /* CollectioViewScreen.swift */; };
+		A4C1FB582380AB25002C2CE2 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1FB572380AB25002C2CE2 /* CollectionViewCell.swift */; };
 		A4EF948F237FFA5C00C9A712 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF948E237FFA5C00C9A712 /* RootViewController.swift */; };
 		B15BAD3D23800CBD0079494E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3823800CBD0079494E /* MainViewController.swift */; };
 		B15BAD3E23800CBD0079494E /* TouchIdAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */; };
@@ -39,6 +41,8 @@
 		78AFBDCF23800BF200E8C117 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		78AFBDD423800F7300E8C117 /* CurrencyListUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListUpdate.swift; sourceTree = "<group>"; };
 		78AFBDD72380127800E8C117 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = SOURCE_ROOT; };
+		A4C1FB532380A6F6002C2CE2 /* CollectioViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectioViewScreen.swift; sourceTree = "<group>"; };
+		A4C1FB572380AB25002C2CE2 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		A4EF948E237FFA5C00C9A712 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B15BAD3823800CBD0079494E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIdAuthViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */,
 				B15BAD3823800CBD0079494E /* MainViewController.swift */,
 				B15BAD3B23800CBD0079494E /* ARViewController.swift */,
+				A4C1FB532380A6F6002C2CE2 /* CollectioViewScreen.swift */,
+				A4C1FB572380AB25002C2CE2 /* CollectionViewCell.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -243,8 +249,10 @@
 			files = (
 				B15BAD3D23800CBD0079494E /* MainViewController.swift in Sources */,
 				78AFBDD023800BF200E8C117 /* DataBase.swift in Sources */,
+				A4C1FB582380AB25002C2CE2 /* CollectionViewCell.swift in Sources */,
 				A4EF948F237FFA5C00C9A712 /* RootViewController.swift in Sources */,
 				7821384C238060B4002E3FD5 /* Date.swift in Sources */,
+				A4C1FB542380A6F6002C2CE2 /* CollectioViewScreen.swift in Sources */,
 				78AFBDD82380127900E8C117 /* User.swift in Sources */,
 				78AFBDC0237FFBC500E8C117 /* ECB.swift in Sources */,
 				78AFBDD523800F7300E8C117 /* CurrencyListUpdate.swift in Sources */,
