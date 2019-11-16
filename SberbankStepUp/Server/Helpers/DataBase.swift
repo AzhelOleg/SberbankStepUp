@@ -20,8 +20,8 @@ public final class DataBase {
         get {
             var userList: [User] = []
             
-            userList.append(User(name: "Олег"))
-            userList.append(User(name: "Вадим"))
+            userList.append(User(name: "Oleg"))
+            userList.append(User(name: "Vadim"))
             
             return userList
         }
