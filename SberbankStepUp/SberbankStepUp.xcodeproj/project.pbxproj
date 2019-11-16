@@ -14,8 +14,8 @@
 		78AFBDC82380028000E8C117 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDC72380028000E8C117 /* Currency.swift */; };
 		78AFBDCA2380028D00E8C117 /* CurrencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDC92380028D00E8C117 /* CurrencyList.swift */; };
 		78AFBDD023800BF200E8C117 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDCF23800BF200E8C117 /* DataBase.swift */; };
-		78AFBDD323800C8400E8C117 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDD223800C8400E8C117 /* User.swift */; };
 		78AFBDD523800F7300E8C117 /* CurrencyListUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDD423800F7300E8C117 /* CurrencyListUpdate.swift */; };
+		78AFBDD82380127900E8C117 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDD72380127800E8C117 /* User.swift */; };
 		A4EF948F237FFA5C00C9A712 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF948E237FFA5C00C9A712 /* RootViewController.swift */; };
 		B15BAD3D23800CBD0079494E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3823800CBD0079494E /* MainViewController.swift */; };
 		B15BAD3E23800CBD0079494E /* TouchIdAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */; };
@@ -35,8 +35,8 @@
 		78AFBDC72380028000E8C117 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		78AFBDC92380028D00E8C117 /* CurrencyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyList.swift; sourceTree = "<group>"; };
 		78AFBDCF23800BF200E8C117 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
-		78AFBDD223800C8400E8C117 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		78AFBDD423800F7300E8C117 /* CurrencyListUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListUpdate.swift; sourceTree = "<group>"; };
+		78AFBDD72380127800E8C117 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = SOURCE_ROOT; };
 		A4EF948E237FFA5C00C9A712 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B15BAD3823800CBD0079494E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIdAuthViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				78AFBDC4238001D800E8C117 /* DTO */,
-				78AFBDD223800C8400E8C117 /* User.swift */,
 				78AFBDC72380028000E8C117 /* Currency.swift */,
 				78AFBDC92380028D00E8C117 /* CurrencyList.swift */,
 			);
@@ -97,6 +96,7 @@
 		78AFBDC4238001D800E8C117 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				78AFBDD72380127800E8C117 /* User.swift */,
 				78AFBDC2237FFE7400E8C117 /* CurrencyDTO.swift */,
 				78AFBDC5238001EF00E8C117 /* CurrencyListDTO.swift */,
 			);
@@ -215,9 +215,9 @@
 			files = (
 				B15BAD3D23800CBD0079494E /* MainViewController.swift in Sources */,
 				78AFBDD023800BF200E8C117 /* DataBase.swift in Sources */,
-
 				A4EF948F237FFA5C00C9A712 /* RootViewController.swift in Sources */,
 				78AFBDC3237FFE7400E8C117 /* CurrencyDTO.swift in Sources */,
+				78AFBDD82380127900E8C117 /* User.swift in Sources */,
 				78AFBDC0237FFBC500E8C117 /* CBR.swift in Sources */,
 				78AFBDD523800F7300E8C117 /* CurrencyListUpdate.swift in Sources */,
 				78AFBDBE237FF8DD00E8C117 /* Server.swift in Sources */,
