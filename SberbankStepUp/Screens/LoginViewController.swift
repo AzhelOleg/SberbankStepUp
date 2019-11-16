@@ -10,18 +10,58 @@ import UIKit
 
 public final class LoginViewController: UIViewController {
 
+    let logo = UIImageView(image: UIImage(named: "sberlogo"))
+    
+    let loginInput = UITextField(frame: CGRect(x: 0, y: 0, width: 120, height: 50))
+    let passInput = UITextField(frame: CGRect(x: 0, y: 0, width: 120, height: 50))
+    
+    var button: UIButton!
+    
+    @objc
+    func login() {
+        // login verification goes here
+        if loginInput.text == "Admin" && passInput.text == "Admin" {
+            UserDefaults.standard.set(true, forKey: "LOGGED_IN")
+            AppDelegate.shared.rootViewController.showMainScreen()
+        }
+    }
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.title = "Login"
-        // Do any additional setup after loading the view.
+        title = "Login"
         
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
-        label.center = view.center
-        label.center.y -= 200
-        label.text = "Log in screen"
+        button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+        button.center = view.center
+        button.center.y += 300
+        button.layer.cornerRadius = 20
+        button.backgroundColor = .green
+        button.isHidden = true
+        button.setTitle("Login", for: .normal)
+        button.addTarget(self, action: #selector(login), for: .touchUpInside)
         
-        view.addSubview(label)
+        logo.contentMode = .scaleAspectFill
+        logo.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        logo.center = view.center
+        logo.center.y -= 300
+        logo.backgroundColor = .clear
+        
+        loginInput.center = view.center
+        passInput.center = view.center
+        
+        loginInput.center.y -= 150
+        passInput.center.y -= 90
+        
+
+        loginInput.borderStyle = .roundedRect
+        passInput.borderStyle = .roundedRect
+        
+        loginInput.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        passInput.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        view.addSubview(loginInput)
+        view.addSubview(passInput)
         view.addSubview(button)
+        view.addSubview(logo)
     }
     
     override public func viewWillAppear(_ animated: Bool) {
@@ -29,25 +69,16 @@ public final class LoginViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
     }
     
-}
-
-
-
-extension LoginViewController {
-    
-    var button: UIButton! {
-        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        button.center = view.center
-        button.backgroundColor = .blue
-        button.setTitle("Login", for: .normal)
-        button.addTarget(self, action: #selector(login), for: .touchUpInside)
-        return button
-    }
-    
     @objc
-    func login() {
-        UserDefaults.standard.set(true, forKey: "LOGGED_IN")
-        AppDelegate.shared.rootViewController.showMainScreen()
+    func textFieldDidChange(_ textField: UITextField) {
+        if !loginInput.text!.isEmpty && !passInput.text!.isEmpty {
+            button.isHidden = false
+            return
+        }
+        button.isHidden = true
     }
-    
 }
+
+
+
+
