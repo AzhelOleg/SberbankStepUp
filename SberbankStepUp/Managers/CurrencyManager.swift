@@ -1,5 +1,5 @@
 //
-//  Server.swift
+//  CurrencyManager.swift
 //  SberbankStepUp
 //
 //  Created by VadimQw  on 16/11/2019.
@@ -8,23 +8,19 @@
 
 import Foundation
 
-public final class Server {
+public final class CurrencyManager {
     
-    public static let shared = Server()
+    public static let shared = CurrencyManager()
     
     private init() { }
     
     // =
     
-    private let delegate = CurrencyManager.shared
+    private var currencySegment: [CurrencyList] = []
     
     // =
     
-    public func userList() -> [User] {
-        return DataBase.shared.getUserList()
-    }
-    
-    public func currencySegment() {
+    public func updateCurrencySegment() {
         ECB.shared.updateCurrencySegment()
     }
     
@@ -33,10 +29,10 @@ public final class Server {
 
 
 // MARK: - CBRDelegate
-extension Server: CurrencyListUpdate {
+extension CurrencyManager: CurrencyListUpdate {
     
     func updateCurrencyList(with segment: [CurrencyList]) {
-        delegate.updateCurrencyList(with: segment)
+        currencySegment = segment
     }
     
 }
@@ -44,7 +40,7 @@ extension Server: CurrencyListUpdate {
 
 
 // MARK: - NSCopying
-extension Server: NSCopying {
+extension CurrencyManager: NSCopying {
     
     public func copy(with zone: NSZone? = nil) -> Any {
         return self

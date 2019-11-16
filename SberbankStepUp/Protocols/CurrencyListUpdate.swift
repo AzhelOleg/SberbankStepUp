@@ -7,5 +7,5 @@
 //
 
 protocol CurrencyListUpdate: class {
-    func updateCurrencyList(with list: CurrencyList)
+    func updateCurrencyList(with segment: [CurrencyList])
 }
