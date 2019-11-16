@@ -6,6 +6,6 @@
 //  Copyright © 2019 jorge. All rights reserved.
 //
 
-protocol CurrencyListUpdate: class {
-    func updateCurrencyList(with segment: [CurrencyList])
+protocol CurrencySegmentUpdate: class {
+    func updateCurrencySegment(with list: CurrencyList)
 }

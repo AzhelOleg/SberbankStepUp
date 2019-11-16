@@ -21,7 +21,7 @@ public final class CurrencyManager {
     // =
     
     public func updateCurrencySegment() {
-        ECB.shared.updateCurrencySegment()
+        Server.shared.updateCurrencySegment()
     }
     
 }
@@ -29,10 +29,10 @@ public final class CurrencyManager {
 
 
 // MARK: - CBRDelegate
-extension CurrencyManager: CurrencyListUpdate {
+extension CurrencyManager: CurrencySegmentUpdate {
     
-    func updateCurrencyList(with segment: [CurrencyList]) {
-        currencySegment = segment
+    func updateCurrencySegment(with list: CurrencyList) {
+        currencySegment.append(list)
     }
     
 }

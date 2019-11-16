@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7821384423804A0E002E3FD5 /* AnalyticStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7821384323804A0E002E3FD5 /* AnalyticStruct.swift */; };
 		78213848238059BF002E3FD5 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78213847238059BF002E3FD5 /* CurrencyManager.swift */; };
+		7821384C238060B4002E3FD5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7821384B238060B4002E3FD5 /* Date.swift */; };
 		78AFBDBE237FF8DD00E8C117 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDBD237FF8DD00E8C117 /* Server.swift */; };
 		78AFBDC0237FFBC500E8C117 /* ECB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDBF237FFBC500E8C117 /* ECB.swift */; };
 		78AFBDC6238001EF00E8C117 /* CurrencyListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDC5238001EF00E8C117 /* CurrencyListDTO.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		7821384323804A0E002E3FD5 /* AnalyticStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticStruct.swift; sourceTree = "<group>"; };
 		78213847238059BF002E3FD5 /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
+		7821384B238060B4002E3FD5 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		78AFBDBD237FF8DD00E8C117 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		78AFBDBF237FFBC500E8C117 /* ECB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECB.swift; sourceTree = "<group>"; };
 		78AFBDC5238001EF00E8C117 /* CurrencyListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListDTO.swift; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 				78213847238059BF002E3FD5 /* CurrencyManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		7821384A238060A2002E3FD5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7821384B238060B4002E3FD5 /* Date.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		78AFBDBB237FF7A900E8C117 /* Screens */ = {
@@ -123,6 +133,7 @@
 				78AFBDC1237FFCC100E8C117 /* Model */,
 				78AFBDBC237FF89E00E8C117 /* Server */,
 				78AFBDD623800F7D00E8C117 /* Protocols */,
+				7821384A238060A2002E3FD5 /* Extensions */,
 				B1F7F3A1237FF59800929800 /* Assets.xcassets */,
 				B1F7F399237FF59500929800 /* SberbankStepUp */,
 				B1F7F398237FF59500929800 /* Products */,
@@ -221,6 +232,7 @@
 				B15BAD3D23800CBD0079494E /* MainViewController.swift in Sources */,
 				78AFBDD023800BF200E8C117 /* DataBase.swift in Sources */,
 				A4EF948F237FFA5C00C9A712 /* RootViewController.swift in Sources */,
+				7821384C238060B4002E3FD5 /* Date.swift in Sources */,
 				78AFBDD82380127900E8C117 /* User.swift in Sources */,
 				78AFBDC0237FFBC500E8C117 /* ECB.swift in Sources */,
 				78AFBDD523800F7300E8C117 /* CurrencyListUpdate.swift in Sources */,

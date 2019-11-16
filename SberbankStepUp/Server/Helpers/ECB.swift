@@ -20,24 +20,28 @@ public final class ECB {
     
     // =
     
-    private func currencySegmentRequest() -> URLRequest {
-        let url = URL(string: "https://api.exchangeratesapi.io/latest?symbols=USD,EUR,CNY&base=RUB")!
+    private func currencyListRequest(for date: String) -> URLRequest {
+        let url = URL(string: "https://api.exchangeratesapi.io/\(date)?symbols=USD,EUR,CNY&base=RUB")!
         return URLRequest(url: url)
     }
     
     public func updateCurrencySegment() {
+        let dateSegment = Date.segment()
         let session = URLSession.shared
-        let getListTask = session.dataTask(with: currencySegmentRequest()) { (data, response, error) in
-            do {
-                let list = try JSONDecoder().decode(CurrencyListDTO.self, from: data!)
-                let currencyList = CurrencyList(dto: list)
-                self.delegate.updateCurrencyList(with: [currencyList])
+        
+        for date in dateSegment {
+            let getListTask = session.dataTask(with: self.currencyListRequest(for: date)) { (data, response, error) in
+                do {
+                    let list = try JSONDecoder().decode(CurrencyListDTO.self, from: data!)
+                    let currencyList = CurrencyList(dto: list)
+                    self.delegate.updateCurrencySegment(with: currencyList)
+                }
+                catch {
+                    print(error)
+                }
             }
-            catch {
-                print(error)
-            }
+            getListTask.resume()
         }
-        getListTask.resume()
     }
     
 }

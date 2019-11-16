@@ -24,7 +24,7 @@ public final class Server {
         return DataBase.shared.getUserList()
     }
     
-    public func currencySegment() {
+    public func updateCurrencySegment() {
         ECB.shared.updateCurrencySegment()
     }
     
@@ -33,10 +33,10 @@ public final class Server {
 
 
 // MARK: - CBRDelegate
-extension Server: CurrencyListUpdate {
+extension Server: CurrencySegmentUpdate {
     
-    func updateCurrencyList(with segment: [CurrencyList]) {
-        delegate.updateCurrencyList(with: segment)
+    func updateCurrencySegment(with list: CurrencyList) {
+        delegate.updateCurrencySegment(with: list)
     }
     
 }
