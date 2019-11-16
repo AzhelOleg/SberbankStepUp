@@ -34,7 +34,7 @@ public final class CurrencyManager {
         Server.shared.updateCurrencySegment()
     }
     
-    public func getAnalyticSegmentList(for money: Int, currency: Currency) -> [AnalyticStruct] {
+    public func getAnalyticSegmentList(for money: Float, currency: Currency) -> [AnalyticStruct] {
         var analyticSegmentList: [AnalyticStruct] = []
         
         var index = 0
