@@ -16,6 +16,29 @@ public final class Server {
     
     // =
     
+    var delegate: CurrencyListUpdate?
+    
+    // =
+    
+    public func userList() -> [User] {
+        return DataBase.shared.getUserList()
+    }
+    
+    public func currencyList() {
+        CBR.shared.updateCurrencyList()
+    }
+    
+}
+
+
+
+// MARK: - CBRDelegate
+extension Server: CurrencyListUpdate {
+    
+    func updateCurrencyList(with list: CurrencyList) {
+        delegate?.updateCurrencyList(with: list)
+    }
+    
 }
 
 
