@@ -58,6 +58,12 @@ public final class LoginViewController: UIViewController {
         loginInput.borderStyle = .roundedRect
         passInput.borderStyle = .roundedRect
         
+        loginInput.tintColor = .black
+        passInput.tintColor = .black
+        
+        loginInput.textAlignment = .center
+        passInput.textAlignment = .center
+        
         loginInput.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         passInput.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         

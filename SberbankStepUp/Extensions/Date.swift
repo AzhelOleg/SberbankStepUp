@@ -25,7 +25,7 @@ extension Date {
     
     private static func currencyDateFormatterMonth() -> DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM"
+        formatter.dateFormat = "MMMM"
         return formatter
     }
     
