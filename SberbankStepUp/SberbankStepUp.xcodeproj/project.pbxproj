@@ -22,6 +22,7 @@
 		B15BAD3E23800CBD0079494E /* TouchIdAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */; };
 		B15BAD3F23800CBD0079494E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3A23800CBD0079494E /* LoginViewController.swift */; };
 		B15BAD4023800CBD0079494E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD3B23800CBD0079494E /* ARViewController.swift */; };
+		B18F38722380B730002422A8 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18F38712380B730002422A8 /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		B1F7F39B237FF59500929800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7F39A237FF59500929800 /* AppDelegate.swift */; };
 		B1F7F3A2237FF59800929800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F7F3A1237FF59800929800 /* Assets.xcassets */; };
 		B1F7F3A5237FF59800929800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F7F3A3237FF59800929800 /* LaunchScreen.storyboard */; };
@@ -43,6 +44,7 @@
 		B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIdAuthViewController.swift; sourceTree = "<group>"; };
 		B15BAD3A23800CBD0079494E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B15BAD3B23800CBD0079494E /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		B18F38712380B730002422A8 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		B1F7F397237FF59500929800 /* SberbankStepUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SberbankStepUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F7F39A237FF59500929800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1F7F3A1237FF59800929800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B18F38722380B730002422A8 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +128,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		B18F38702380B730002422A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B18F38712380B730002422A8 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B1F7F38E237FF59500929800 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +148,7 @@
 				B1F7F3A1237FF59800929800 /* Assets.xcassets */,
 				B1F7F399237FF59500929800 /* SberbankStepUp */,
 				B1F7F398237FF59500929800 /* Products */,
+				B18F38702380B730002422A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
