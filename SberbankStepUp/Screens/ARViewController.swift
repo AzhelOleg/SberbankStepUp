@@ -19,6 +19,10 @@ public final class ARViewController: UIViewController {
     let textScale = 0.007
     let tubeRadius = 1.0
     
+    private init() {
+        
+    }
+    
     init(data : [AnalyticStruct]) {
         self.data = data
     }
@@ -30,10 +34,10 @@ public final class ARViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        data = []
-        for i in 1...12 {
-            data.append(AnalyticStruct(year: "\(2019)", month: "Сентябрь", money: 99999.99, currency: "$", conclusion: i % 2 == 0 ? .drop : .rise))
-        }
+//        data = []
+//        for i in 1...12 {
+//            data.append(AnalyticStruct(year: "\(2019)", month: "Сентябрь", money: 99999.99, currency: "$", conclusion: i % 2 == 0 ? .drop : .rise))
+//        }
         
         arView = ARSCNView()
         view.addSubview(arView)
