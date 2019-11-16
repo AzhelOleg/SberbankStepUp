@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78AFBDBE237FF8DD00E8C117 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDBD237FF8DD00E8C117 /* Server.swift */; };
+		78AFBDC0237FFBC500E8C117 /* CBR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDBF237FFBC500E8C117 /* CBR.swift */; };
 		B1F7F39B237FF59500929800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7F39A237FF59500929800 /* AppDelegate.swift */; };
 		B1F7F3A2237FF59800929800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F7F3A1237FF59800929800 /* Assets.xcassets */; };
 		B1F7F3A5237FF59800929800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F7F3A3237FF59800929800 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78AFBDBD237FF8DD00E8C117 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		78AFBDBF237FFBC500E8C117 /* CBR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBR.swift; sourceTree = "<group>"; };
 		B1F7F397237FF59500929800 /* SberbankStepUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SberbankStepUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F7F39A237FF59500929800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1F7F3A1237FF59800929800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,10 +42,20 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
+		78AFBDBC237FF89E00E8C117 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				78AFBDBD237FF8DD00E8C117 /* Server.swift */,
+				78AFBDBF237FFBC500E8C117 /* CBR.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
 		B1F7F38E237FF59500929800 = {
 			isa = PBXGroup;
 			children = (
 				78AFBDBB237FF7A900E8C117 /* Screens */,
+				78AFBDBC237FF89E00E8C117 /* Server */,
 				B1F7F3A1237FF59800929800 /* Assets.xcassets */,
 				B1F7F399237FF59500929800 /* SberbankStepUp */,
 				B1F7F398237FF59500929800 /* Products */,
@@ -136,6 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78AFBDC0237FFBC500E8C117 /* CBR.swift in Sources */,
+				78AFBDBE237FF8DD00E8C117 /* Server.swift in Sources */,
 				B1F7F39B237FF59500929800 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
