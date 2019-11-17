@@ -47,6 +47,7 @@ public final class LoginViewController: UIViewController {
         loginInput.center.y += 120
         
         passInput.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        passInput.isSecureTextEntry = true
         passInput.center = view.center
         passInput.center.y += 170
         

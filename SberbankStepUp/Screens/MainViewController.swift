@@ -34,6 +34,7 @@ public final class MainViewController: UIViewController {
 		let textField = UITextField()
 		textField.translatesAutoresizingMaskIntoConstraints = false
 		textField.font = UIFont.boldSystemFont(ofSize: 40)
+        textField.tintColor = .black
 		textField.placeholder = "Amount"
 		textField.textAlignment = .center
 		textField.keyboardType = .numberPad
@@ -53,6 +54,7 @@ public final class MainViewController: UIViewController {
 		let button = UIButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
 		button.setTitle("Calculate", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 21, weight: .medium)
 		button.addTarget(self, action: #selector(calculateSelector), for: .touchUpInside)
 		button.backgroundColor = UIColor.sberColor
 		button.layer.cornerRadius = 50
@@ -142,6 +144,7 @@ extension MainViewController {
         view.addSubview(backView)
         
 		self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutSelector))
+        self.navigationItem.rightBarButtonItem?.tintColor = .black
 		//
 		imageLayout()
 		pickerLayout()
@@ -159,16 +162,15 @@ extension MainViewController {
         
         let alert = UIAlertController(title: "Logging out", message: "Are you sure you'd like to log out?", preferredStyle: .alert)
         
-        let logout = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction) in
+        let logout = UIAlertAction(title: "Yes", style: .destructive) { (action:UIAlertAction) in
             AppDelegate.shared.rootViewController.switchToTouchIdAuthScreen()
         }
 
-        let stay = UIAlertAction(title: "No", style: .default) { (action:UIAlertAction) in
-            
-        }
+        let stay = UIAlertAction(title: "No", style: .default) { (action:UIAlertAction) in }
+        stay.setValue(UIColor.black, forKey: "titleTextColor")
         
-        alert.addAction(logout)
         alert.addAction(stay)
+        alert.addAction(logout)
         
         self.present(alert, animated: true, completion: nil)
 	}
