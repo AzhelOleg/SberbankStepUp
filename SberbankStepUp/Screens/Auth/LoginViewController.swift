@@ -43,13 +43,17 @@ public final class LoginViewController: UIViewController {
         logo.center.y -= 300
         
         loginInput.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        loginInput.backgroundColor = .sberColor
         loginInput.center = view.center
-        loginInput.center.y += 120
+        loginInput.delegate = self
+//        loginInput.center.y += 120
         
         passInput.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        passInput.backgroundColor = .sberColor
         passInput.isSecureTextEntry = true
         passInput.center = view.center
-        passInput.center.y += 170
+        passInput.center.y += 50
+        passInput.delegate = self
         
         view.addSubview(loginInput)
         view.addSubview(passInput)
@@ -94,5 +98,11 @@ public final class LoginViewController: UIViewController {
             AppDelegate.shared.rootViewController.showMainScreen()
         }
     }
-    
+}
+
+extension LoginViewController : UITextFieldDelegate {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
