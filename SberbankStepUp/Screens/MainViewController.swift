@@ -38,7 +38,6 @@ public final class MainViewController: UIViewController {
 		textField.placeholder = "Amount"
 		textField.textAlignment = .center
 		textField.keyboardType = .numberPad
-		textField.addDoneCancelToolbar()
 		return textField
 	}()
 	private lazy var valueLabel:UILabel = {
@@ -182,7 +181,8 @@ extension MainViewController {
 		}
 		view.addSubview(indicator)
 
-		let values = CurrencyManager.shared.getAnalyticSegmentList(for: Float(valueTextField.text!)!, currency: Currency.allCases[picker.selectedRow(inComponent: 0)])
+		let values = CurrencyManager.shared.getAnalyticSegmentList(for: Float(valueTextField.text!)!,
+                                                                   currency: Currency.allCases[picker.selectedRow(inComponent: 0)])
 		let collection = CollectionViewScreen(with: values)
 		collection.value = Int(valueTextField.text!)!
 		collection.modalTransitionStyle = .coverVertical

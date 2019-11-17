@@ -82,6 +82,8 @@ public class CollectionViewScreen: UIViewController {
 extension CollectionViewScreen {
 	override public func viewDidLoad() {
 		super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: self, action: nil)
         view.backgroundColor = .clear
         let gradient = GradientView()
         gradient.update()
