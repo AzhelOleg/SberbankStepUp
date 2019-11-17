@@ -129,6 +129,16 @@ extension MainViewController {
 		picker.dataSource = self
 		valueTextField.delegate = self
 		//
+        
+        //
+        view.backgroundColor = .clear
+        let gradient = GradientView()
+        gradient.update()
+        let backgroundLayer = gradient.gradientLayer
+        backgroundLayer.frame = view.frame
+        view.layer.insertSublayer(backgroundLayer, at: 0)
+
+        
 		self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutSelector))
 		//
 		imageLayout()
