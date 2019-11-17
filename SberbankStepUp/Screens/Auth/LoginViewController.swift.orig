@@ -44,7 +44,23 @@ public final class LoginViewController: UIViewController {
         
         loginInput.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         loginInput.center = view.center
-        loginInput.center.y += 120
+        passInput.center = view.center
+        
+//        loginInput.center.y += 120
+        passInput.center.y += 50
+        
+
+        loginInput.borderStyle = .roundedRect
+        passInput.borderStyle = .roundedRect
+        
+        loginInput.tintColor = .black
+        passInput.tintColor = .black
+        
+        loginInput.textAlignment = .center
+        passInput.textAlignment = .center
+        
+        loginInput.placeholder = "Enter login"
+        passInput.placeholder = "Enter password"
         
         passInput.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         passInput.center = view.center
@@ -54,6 +70,11 @@ public final class LoginViewController: UIViewController {
         view.addSubview(passInput)
         view.addSubview(button)
         view.addSubview(logo)
+        
+    }
+    
+    public override func viewDidAppear(_ animated: Bool) {
+        AppDelegate.shared.rootViewController.showMainScreen()
     }
     
     override public func viewWillAppear(_ animated: Bool) {
@@ -95,13 +116,10 @@ public final class LoginViewController: UIViewController {
             AppDelegate.shared.rootViewController.showMainScreen()
         }
     }
-    
-<<<<<<< HEAD:SberbankStepUp/Screens/Auth/LoginViewController.swift
-=======
+
     func update(_ colorBottom: UIColor, _ colorTop: UIColor) {        
         gradientLayer.colors = [colorBottom, colorTop].compactMap{ $0.cgColor }
         gradientLayer.locations = [0.0, 1.0]
         
-    }
->>>>>>> 2b28b544859f404d6f201912fc0ee0527762515b:SberbankStepUp/Screens/LoginViewController.swift
+
 }

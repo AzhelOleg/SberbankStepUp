@@ -19,10 +19,6 @@ public final class ARViewController: UIViewController {
     let textScale = 0.007
     let tubeRadius = 1.0
     
-//    private init() {
-//
-//    }
-    
     init(data : [AnalyticStruct]) {
 		super.init(nibName: nil, bundle: nil)
         self.data = data
@@ -34,11 +30,6 @@ public final class ARViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        
-//        data = []
-//        for i in 1...12 {
-//            data.append(AnalyticStruct(year: "\(2019)", month: "Сентябрь", money: 99999.99, currency: "$", conclusion: i % 2 == 0 ? .drop : .rise))
-//        }
         
         arView = ARSCNView()
         view.addSubview(arView)
@@ -59,7 +50,7 @@ public final class ARViewController: UIViewController {
         logo.geometry = SCNTube(innerRadius: 0, outerRadius: CGFloat(0.1), height: 0.05)
         logo.position = SCNVector3(0, 1, 0)
         logo.rotation = SCNVector4(0, 0, -1, Double.pi / 2.0)
-        logo.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "logo")
+        logo.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "sberlogo")
         arView.scene.rootNode.addChildNode(logo)
         logo.runAction(SCNAction.rotate(toAxisAngle: SCNVector4(1, 0, 0, 2 * Double.pi * 1000), duration: 3000))
         arView.autoenablesDefaultLighting = true
@@ -67,13 +58,17 @@ public final class ARViewController: UIViewController {
     
     func createAndPlaceAnaliticStructNode(by index: Int) {
         let analiticStruct = data[index]
-        addText("\(analiticStruct.money)\(analiticStruct.currency)", toIndex: index, toHeight: 0.1, ofSize: 1)
-        addText("(\(analiticStruct.difference > 0.0 ? "+" : "-")\(analiticStruct.money)%)", toIndex: index, toHeight: 0.04, ofSize: 0.7)
+        addText("\(String(format: "%.0f", analiticStruct.money))RUB", toIndex: index, toHeight: 0.1, ofSize: 1)
+        if (abs(analiticStruct.difference) < 0.01) {
+            addText("(\(String(format: "%.2f", analiticStruct.difference))%)", toIndex: index, toHeight: 0.04, ofSize: 0.7)
+        } else {
+            addText("(\(analiticStruct.difference > 0.0 ? "+" : "-")\(String(format: "%.2f", analiticStruct.difference))%)", toIndex: index, toHeight: 0.04, ofSize: 0.7)
+        }
         addText("\(analiticStruct.month), \(analiticStruct.year)", toIndex: index, toHeight: -0.05, ofSize: 0.7)
     }
     
     func addText(_ text: String, toIndex index: Int, toHeight height: Double, ofSize size : Double) {
-        let geometry = SCNText(string: text, extrusionDepth: 0.05)
+        let geometry = SCNText(string: text, extrusionDepth: 0.1  )
         geometry.flatness = 0.01
         geometry.chamferRadius = 0.3
         geometry.font = UIFont(name: "Menlo", size: CGFloat(size))
@@ -94,12 +89,12 @@ public final class ARViewController: UIViewController {
         node.position = SCNVector3(tubeRadius * sin(angle), height, tubeRadius * (-cos(angle)))
         node.rotation = SCNVector4(0, 1, 0, -angle)
         switch analiticConslusion {
-        case .rise:
-            node.geometry?.firstMaterial?.diffuse.contents = UIColor.green
         case .drop:
+            node.geometry?.firstMaterial?.diffuse.contents = UIColor.green
+        case .rise:
             node.geometry?.firstMaterial?.diffuse.contents = UIColor.red
         case .stability:
-            node.geometry?.firstMaterial?.diffuse.contents = UIColor.lightGray
+            node.geometry?.firstMaterial?.diffuse.contents = UIColor.gray
         }
         arView.scene.rootNode.addChildNode(node)
         return node
