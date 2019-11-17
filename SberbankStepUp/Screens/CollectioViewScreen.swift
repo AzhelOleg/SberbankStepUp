@@ -10,10 +10,10 @@ import UIKit
 
 public class CollectionViewScreen: UIViewController {
 	public var value: Int!
-	private let model: [AnalyticStruct]
+	private let data: [AnalyticStruct]
 	
 	init(with data:[AnalyticStruct]) {
-		self.model = data
+		self.data = data
 		super.init(nibName: nil, bundle: nil)
 	}
 	
@@ -75,13 +75,13 @@ extension CollectionViewScreen {
 	override public func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = .white
-		valueLabel.text = "You bought " + "\(value!)" + " \(model.last!.currency)\n" + " for " + "\(Int(model.last!.money))" + " RUB"
+		valueLabel.text = "You bought " + "\(value!)" + " \(data.last!.currency)\n" + " for " + "\(Int(data.last!.money))" + " RUB"
 		collectionLayout()
 		stackLayout()
 	}
 	override public func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		let curIndexPath = IndexPath(row: self.model.count - 1, section: 0)
+		let curIndexPath = IndexPath(row: self.data.count - 1, section: 0)
 		collectionView.scrollToItem(at: curIndexPath, at: .centeredHorizontally, animated: true)
 	}
 
@@ -113,12 +113,12 @@ extension CollectionViewScreen {
 
 extension CollectionViewScreen: UICollectionViewDataSource {
 	public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return self.model.count
+		return self.data.count
 	}
 	
 	public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.id, for: indexPath) as! CollectionViewCell
-		let data = self.model[indexPath.row]
+		let data = self.data[indexPath.row]
 		cell.populate(data: data, value: value)
 		return cell
 	}
@@ -135,6 +135,6 @@ extension CollectionViewScreen: UICollectionViewDelegateFlowLayout {
 extension CollectionViewScreen {
 	@objc
 	private func arSelector() {
-		
+		present(ARViewController(data: data), animated: true, completion: nil)
 	}
 }

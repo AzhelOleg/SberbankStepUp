@@ -19,11 +19,12 @@ public final class ARViewController: UIViewController {
     let textScale = 0.007
     let tubeRadius = 1.0
     
-    private init() {
-        
-    }
+//    private init() {
+//
+//    }
     
     init(data : [AnalyticStruct]) {
+		super.init(nibName: nil, bundle: nil)
         self.data = data
     }
     
