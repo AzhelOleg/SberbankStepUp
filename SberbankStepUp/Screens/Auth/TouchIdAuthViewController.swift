@@ -33,8 +33,10 @@ public final class TouchIdAuthViewController: UIViewController {
     
 }
 
+
 extension TouchIdAuthViewController {
-    func authenticationWithTouchId() {
+    
+    private func authenticationWithTouchId() {
         // 1. Create a authentication context
         let authenticationContext = LAContext()
         var error:NSError?
@@ -55,86 +57,45 @@ extension TouchIdAuthViewController {
                     // Fingerprint recognized
                     // Go to view controller
                     DispatchQueue.global(qos: .background).async {
-                        
-                        // Background Thread
-                        
                         DispatchQueue.main.async {
                             // Run UI Updates
                             AppDelegate.shared.rootViewController.showMainScreen()
-                            
                         }
                     }
-
-                } else {
+                }
+                else {
                     // Check if there is an error
                     if let error = error {
-                        
                         //let message = self.errorMessageForLAErrorCode(errorCode: )
                         self.showAlertViewAfterEvaluatingPolicyWithMessage(message:  error.localizedDescription)
-                        
                     }
-                    
                 }
         })
     }
-
-    /**
-     This method will present an UIAlertViewController to inform the user that the device has not a TouchID sensor.
-     */
-    func showAlertViewIfNoBiometricSensorHasBeenDetected(){
-        
+    
+    private func showAlertViewIfNoBiometricSensorHasBeenDetected(){
         showAlertWithTitle(title: "Error", message: "This device does not have a TouchID sensor.")
-        
     }
     
-    /**
-     This method will present an UIAlertViewController to inform the user that there was a problem with the TouchID sensor.
-     
-     - parameter error: the error message
-     
-     */
-    func showAlertViewAfterEvaluatingPolicyWithMessage( message:String ){
-        
+    private func showAlertViewAfterEvaluatingPolicyWithMessage( message:String ){
         showAlertWithTitle(title: "Error", message: message)
-        
     }
     
-    /**
-     This method presents an UIAlertViewController to the user.
-     
-     - parameter title:  The title for the UIAlertViewController.
-     - parameter message:The message for the UIAlertViewController.
-     
-     */
-    func showAlertWithTitle( title:String, message:String ) {
-        
+    private func showAlertWithTitle( title:String, message:String ) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alertVC.addAction(okAction)
         
         DispatchQueue.global(qos: .background).async {
-            
-            // Background Thread
-            
             DispatchQueue.main.async {
                 // Run UI Updates
                 self.present(alertVC, animated: true, completion: {})
             }
         }
-        
     }
     
-    /**
-     This method will return an error message string for the provided error code.
-     The method check the error code against all cases described in the `LAError` enum.
-     If the error code can't be found, a default message is returned.
-     
-     - parameter errorCode: the error code
-     - returns: the error message
-     */
-    func errorMessageForLAErrorCode( errorCode:Int ) -> String{
-        
+    private func errorMessageForLAErrorCode( errorCode:Int ) -> String{
         var message = ""
         
         switch errorCode {
@@ -172,12 +133,6 @@ extension TouchIdAuthViewController {
         }
         
         return message
-        
     }
-    
-    /**
-     This method will push the authenticated view controller onto the UINavigationController stack
-     */
-
     
 }

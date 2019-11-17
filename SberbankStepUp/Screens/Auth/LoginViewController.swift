@@ -77,14 +77,12 @@ public final class LoginViewController: UIViewController {
     
     @objc
     func login() {
-        UIView.animate(withDuration: 0.4,
-                       animations: {
-                        self.button.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-        },
-                       completion: { _ in
-                        UIView.animate(withDuration: 0.4) {
-                            self.button.transform = CGAffineTransform.identity
-                        }
+        UIView.animate(withDuration: 0.4, animations: {
+            self.button.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+        }, completion: { _ in
+            UIView.animate(withDuration: 0.4) {
+                self.button.transform = CGAffineTransform.identity
+            }
         })
         // login verification goes here
         let login = loginInput.text!
