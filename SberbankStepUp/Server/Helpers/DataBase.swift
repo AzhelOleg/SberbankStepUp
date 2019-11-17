@@ -24,6 +24,7 @@ public final class DataBase {
             userList.append(User(name: "Vadim"))
             userList.append(User(name: "Georgiy"))
             userList.append(User(name: "Aleksey"))
+            userList.append(User(name: "admin", password: "admin"))
             
             return userList
         }

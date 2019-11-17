@@ -12,11 +12,10 @@ public struct User {
     public var login: String
     public var password: String
     
-    
-    init(name: String) {
+    init(name: String, password: String = "123") {
         self.name = name
         self.login = name
-        self.password = "123"
+        self.password = password
     }
     
 }
