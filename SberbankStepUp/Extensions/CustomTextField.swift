@@ -14,6 +14,7 @@ extension UITextField {
         let textField = UITextField()
         textField.frame.size = CGSize(width: 200, height: 30)
         textField.borderStyle = .roundedRect
+        textField.clearsOnBeginEditing = true
         textField.tintColor = .black
         textField.textAlignment = .center
         textField.placeholder = placeholder
