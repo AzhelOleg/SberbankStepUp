@@ -70,7 +70,7 @@ extension TouchIdAuthViewController {
                     if let error = error {
                         
                         //let message = self.errorMessageForLAErrorCode(errorCode: )
-                        self.showAlertViewAfterEvaluatingPolicyWithMessage(message: "things went bad")
+                        self.showAlertViewAfterEvaluatingPolicyWithMessage(message:  error.localizedDescription)
                         
                     }
                     
@@ -154,11 +154,11 @@ extension TouchIdAuthViewController {
         case LAError.systemCancel.rawValue:
             message = "Authentication was cancelled by the system"
             
-        case LAError.touchIDLockout.rawValue:
+        case LAError.biometryLockout.rawValue:
             message = "Too many failed attempts."
             
-        case LAError.touchIDNotAvailable.rawValue:
-            message = "TouchID is not available on the device"
+        case LAError.biometryNotAvailable.rawValue:
+            message = "Biometry is not available on the device"
             
         case LAError.userCancel.rawValue:
             message = "The user did cancel"
