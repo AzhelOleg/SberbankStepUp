@@ -12,14 +12,14 @@ public final class MainViewController: UIViewController {
 	// MARK: - UI
 	private let picker: UIPickerView = {
 		let picker = UIPickerView()
+        picker.tintColor = .sberColor
 		picker.translatesAutoresizingMaskIntoConstraints = false
 		return picker
 	}()
-	private let imageButton: UIButton = {
-		let imageButton = UIButton()
+	private let imageButton: UIImageView = {
+		let imageButton = UIImageView()
 		imageButton.translatesAutoresizingMaskIntoConstraints = false
-		let image = UIImage(named: "sberlogo")!
-		imageButton.setImage(image, for: .normal)
+		imageButton.image = UIImage(named: "sberlogo")!
 		return imageButton
 	}()
 	private let currencyLabel: UILabel = {
@@ -34,8 +34,9 @@ public final class MainViewController: UIViewController {
 		let textField = UITextField()
 		textField.translatesAutoresizingMaskIntoConstraints = false
 		textField.font = UIFont.boldSystemFont(ofSize: 40)
+        textField.textColor = .sberColor
         textField.tintColor = .black
-		textField.placeholder = "Amount"
+		textField.attributedPlaceholder = NSAttributedString(string: "Amount", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
 		textField.textAlignment = .center
 		textField.keyboardType = .numberPad
 		return textField
@@ -55,7 +56,8 @@ public final class MainViewController: UIViewController {
 		button.setTitle("Calculate", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 21, weight: .medium)
 		button.addTarget(self, action: #selector(calculateSelector), for: .touchUpInside)
-		button.backgroundColor = UIColor.sberColor
+//		button.backgroundColor = UIColor.sberColor
+        button.tintColor = .sberColor
 		button.layer.cornerRadius = 50
 		return button
 	}()
@@ -80,13 +82,14 @@ extension MainViewController {
 		picker.topAnchor.constraint(equalTo: imageButton.bottomAnchor, constant: 40).isActive = true
 		picker.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
 		picker.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -0).isActive = true
-		picker.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -500).isActive = true
+        picker.heightAnchor.constraint(equalToConstant: 100).isActive = true
+//		picker.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -500).isActive = true
 	}
 	private func imageLayout() {
 		view.addSubview(imageButton)
 		imageButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40).isActive = true
-		imageButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
-		imageButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        imageButton.widthAnchor.constraint(equalTo: imageButton.heightAnchor).isActive = true
+		imageButton.heightAnchor.constraint(equalToConstant: 75).isActive = true
 		imageButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 	}
 	private func currencyLabelLayout() {
@@ -201,6 +204,19 @@ extension MainViewController:UIPickerViewDataSource {
 	public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 		return Currency.allCases.count
 	}
+    
+    public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont.systemFont(ofSize: 30)
+            pickerLabel?.textAlignment = .center
+        }
+        pickerLabel?.text = Currency.allCases[row].rawValue
+        pickerLabel?.textColor = .sberColor
+
+        return pickerLabel!
+    }
 }
 
 // MARK: - Picker delegate
@@ -208,6 +224,10 @@ extension MainViewController:UIPickerViewDelegate {
 	public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
 		return Currency.allCases[row].rawValue
 	}
+    
+    public func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 50.0
+    }
 }
 
 // MARK: - Textfield delegate
