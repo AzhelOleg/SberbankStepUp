@@ -99,7 +99,7 @@ extension CollectionViewCell {
 		switch data.conclusion {
 		case .drop:
 			sign = "-"
-			contentView.backgroundColor = .green
+			contentView.backgroundColor = .sberColor
 		case .rise:
 			sign = "+"
 			contentView.backgroundColor = .red
