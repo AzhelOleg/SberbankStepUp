@@ -9,6 +9,7 @@
 import UIKit
 
 public class CollectionViewScreen: UIViewController {
+	public var value: Int!
 	private let model: [AnalyticStruct]
 	
 	init(with data:[AnalyticStruct]) {
@@ -71,7 +72,7 @@ extension CollectionViewScreen: UICollectionViewDataSource {
 	public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.id, for: indexPath) as! CollectionViewCell
 		let data = self.model[indexPath.row]
-		cell.populate(data: data)
+		cell.populate(data: data, value: value)
 		return cell
 	}
 }
