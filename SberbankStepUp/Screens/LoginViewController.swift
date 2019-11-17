@@ -78,8 +78,8 @@ public final class LoginViewController: UIViewController {
         loginInput.center = view.center
         passInput.center = view.center
         
-        loginInput.center.y += 120
-        passInput.center.y += 170
+//        loginInput.center.y += 120
+        passInput.center.y += 50
         
 
         loginInput.borderStyle = .roundedRect
@@ -101,6 +101,11 @@ public final class LoginViewController: UIViewController {
         view.addSubview(passInput)
         view.addSubview(button)
         view.addSubview(logo)
+        
+    }
+    
+    public override func viewDidAppear(_ animated: Bool) {
+        AppDelegate.shared.rootViewController.showMainScreen()
     }
     
     override public func viewWillAppear(_ animated: Bool) {
