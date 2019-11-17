@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		781FBD1D2380F47A00226D32 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FBD1C2380F47A00226D32 /* CustomTextField.swift */; };
+		781FBD202380F7CD00226D32 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FBD1F2380F7CD00226D32 /* GradientView.swift */; };
+		781FBD222380F9D900226D32 /* UIKitForApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FBD212380F9D900226D32 /* UIKitForApplication.swift */; };
 		7821384423804A0E002E3FD5 /* AnalyticStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7821384323804A0E002E3FD5 /* AnalyticStruct.swift */; };
 		78213848238059BF002E3FD5 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78213847238059BF002E3FD5 /* CurrencyManager.swift */; };
-		7821384C238060B4002E3FD5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7821384B238060B4002E3FD5 /* Date.swift */; };
+		7821384C238060B4002E3FD5 /* DateSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7821384B238060B4002E3FD5 /* DateSegment.swift */; };
 		78AFBDBE237FF8DD00E8C117 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDBD237FF8DD00E8C117 /* Server.swift */; };
 		78AFBDC0237FFBC500E8C117 /* ECB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDBF237FFBC500E8C117 /* ECB.swift */; };
 		78AFBDC6238001EF00E8C117 /* CurrencyListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBDC5238001EF00E8C117 /* CurrencyListDTO.swift */; };
@@ -31,9 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		781FBD1C2380F47A00226D32 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		781FBD1F2380F7CD00226D32 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		781FBD212380F9D900226D32 /* UIKitForApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitForApplication.swift; sourceTree = "<group>"; };
 		7821384323804A0E002E3FD5 /* AnalyticStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticStruct.swift; sourceTree = "<group>"; };
 		78213847238059BF002E3FD5 /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
-		7821384B238060B4002E3FD5 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		7821384B238060B4002E3FD5 /* DateSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSegment.swift; sourceTree = "<group>"; };
 		78AFBDBD237FF8DD00E8C117 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		78AFBDBF237FFBC500E8C117 /* ECB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECB.swift; sourceTree = "<group>"; };
 		78AFBDC5238001EF00E8C117 /* CurrencyListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListDTO.swift; sourceTree = "<group>"; };
@@ -68,6 +74,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		781FBD1A2380F32000226D32 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B15BAD3A23800CBD0079494E /* LoginViewController.swift */,
+				B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		781FBD1B2380F33900226D32 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				A4C1FB532380A6F6002C2CE2 /* CollectioViewScreen.swift */,
+				A4C1FB572380AB25002C2CE2 /* CollectionViewCell.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		781FBD1E2380F79A00226D32 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				781FBD1F2380F7CD00226D32 /* GradientView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		782138452380549D002E3FD5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,7 +120,9 @@
 		7821384A238060A2002E3FD5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7821384B238060B4002E3FD5 /* Date.swift */,
+				781FBD212380F9D900226D32 /* UIKitForApplication.swift */,
+				781FBD1C2380F47A00226D32 /* CustomTextField.swift */,
+				7821384B238060B4002E3FD5 /* DateSegment.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -96,12 +130,10 @@
 		78AFBDBB237FF7A900E8C117 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B15BAD3A23800CBD0079494E /* LoginViewController.swift */,
-				B15BAD3923800CBD0079494E /* TouchIdAuthViewController.swift */,
+				781FBD1A2380F32000226D32 /* Auth */,
 				B15BAD3823800CBD0079494E /* MainViewController.swift */,
+				781FBD1B2380F33900226D32 /* Analytics */,
 				B15BAD3B23800CBD0079494E /* ARViewController.swift */,
-				A4C1FB532380A6F6002C2CE2 /* CollectioViewScreen.swift */,
-				A4C1FB572380AB25002C2CE2 /* CollectionViewCell.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -150,6 +182,7 @@
 				78AFBDC1237FFCC100E8C117 /* Model */,
 				78AFBDBC237FF89E00E8C117 /* Server */,
 				78AFBDD623800F7D00E8C117 /* Protocols */,
+				781FBD1E2380F79A00226D32 /* Components */,
 				7821384A238060A2002E3FD5 /* Extensions */,
 				B1F7F3A1237FF59800929800 /* Assets.xcassets */,
 				B1F7F399237FF59500929800 /* SberbankStepUp */,
@@ -248,10 +281,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B15BAD3D23800CBD0079494E /* MainViewController.swift in Sources */,
+				781FBD222380F9D900226D32 /* UIKitForApplication.swift in Sources */,
 				78AFBDD023800BF200E8C117 /* DataBase.swift in Sources */,
+				781FBD202380F7CD00226D32 /* GradientView.swift in Sources */,
 				A4C1FB582380AB25002C2CE2 /* CollectionViewCell.swift in Sources */,
 				A4EF948F237FFA5C00C9A712 /* RootViewController.swift in Sources */,
-				7821384C238060B4002E3FD5 /* Date.swift in Sources */,
+				7821384C238060B4002E3FD5 /* DateSegment.swift in Sources */,
+				781FBD1D2380F47A00226D32 /* CustomTextField.swift in Sources */,
 				A4C1FB542380A6F6002C2CE2 /* CollectioViewScreen.swift in Sources */,
 				78AFBDD82380127900E8C117 /* User.swift in Sources */,
 				78AFBDC0237FFBC500E8C117 /* ECB.swift in Sources */,
@@ -404,7 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F2ELRNS2ZG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SberbankStepUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -424,7 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F2ELRNS2ZG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SberbankStepUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

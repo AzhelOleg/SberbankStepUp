@@ -13,7 +13,6 @@ public enum AnaliticConclusion {
 }
 
 
-
 // MARK: - Struct
 public struct AnalyticStruct {
     

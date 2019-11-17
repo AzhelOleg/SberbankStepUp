@@ -14,6 +14,7 @@ public enum Currency: String, CaseIterable {
     case CNY = "CNY"
 }
 
+
 // MARK: - Class
 public final class CurrencyManager {
     
@@ -77,7 +78,6 @@ public final class CurrencyManager {
 }
 
 
-
 // MARK: - CBRDelegate
 extension CurrencyManager: CurrencySegmentUpdate {
     
@@ -87,7 +87,6 @@ extension CurrencyManager: CurrencySegmentUpdate {
     }
     
 }
-
 
 
 // MARK: - NSCopying

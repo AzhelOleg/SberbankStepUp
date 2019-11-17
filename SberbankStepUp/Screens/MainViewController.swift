@@ -225,12 +225,3 @@ extension UITextField {
 	@objc func doneButtonTapped() { self.resignFirstResponder() }
 	@objc func cancelButtonTapped() { self.resignFirstResponder() }
 }
-
-
-extension UIColor {
-	static var sberColor:UIColor {
-//		let color = UIColor(displayP3Red: 96, green: 156, blue: 65, alpha: 1)
-//		return color
-		return .green
-	}
-}

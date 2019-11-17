@@ -8,10 +8,11 @@
 
 import UIKit
 
-final class RootViewController: UIViewController {
+public final class RootViewController: UIViewController {
     
     private var current: UIViewController
     
+    // Init
     init() {
         self.current = LoginViewController()
         super.init(nibName: nil, bundle: nil)
@@ -21,7 +22,8 @@ final class RootViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    
+    override public func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
 		//
@@ -37,14 +39,9 @@ final class RootViewController: UIViewController {
         new.view.frame = view.bounds
         view.addSubview(new.view)
         new.didMove(toParent: self)
-        //
-//        current.willMove(toParent: nil)
-//        current.view.removeFromSuperview()
-//        current.removeFromParent()
-//        //
-//        current = new
         animateFadeTransition(to: new)
     }
+    
     
     public func switchToTouchIdAuthScreen() {
         animateFadeTransition(to: TouchIdAuthViewController())
@@ -60,19 +57,6 @@ final class RootViewController: UIViewController {
         addChild(new)
         
         transition(from: current, to: new, duration: 0.3, options: [.transitionCrossDissolve, .curveEaseOut], animations: {
-        }) { _ in
-            self.current.removeFromParent()
-            new.didMove(toParent: self)
-            self.current = new
-            completion?()
-        }
-    }
-    
-    private func animateDismissTransition(to new: UIViewController, completion: (() -> Void)? = nil) {
-        current.willMove(toParent: nil)
-        addChild(new)
-        transition(from: current, to: new, duration: 0.3, options: [], animations: {
-            new.view.frame = self.view.bounds
         }) { _ in
             self.current.removeFromParent()
             new.didMove(toParent: self)

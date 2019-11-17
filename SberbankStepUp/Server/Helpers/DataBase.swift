@@ -36,7 +36,6 @@ public final class DataBase {
 }
 
 
-
 // MARK: - NSCopying
 extension DataBase: NSCopying {
     

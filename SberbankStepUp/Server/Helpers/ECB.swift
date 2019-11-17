@@ -15,9 +15,7 @@ public final class ECB {
     private init() { }
     
     // =
-    
     private let delegate = Server.shared
-    
     // =
     
     private func currencyListRequest(for date: String) -> URLRequest {
@@ -49,7 +47,6 @@ public final class ECB {
     }
     
 }
-
 
 
 // MARK: - NSCopying

@@ -15,9 +15,7 @@ public final class Server {
     private init() { }
     
     // =
-    
     private let delegate = CurrencyManager.shared
-    
     // =
     
     public func userList() -> [User] {
@@ -31,7 +29,6 @@ public final class Server {
 }
 
 
-
 // MARK: - CBRDelegate
 extension Server: CurrencySegmentUpdate {
     
@@ -40,7 +37,6 @@ extension Server: CurrencySegmentUpdate {
     }
     
 }
-
 
 
 // MARK: - NSCopying
