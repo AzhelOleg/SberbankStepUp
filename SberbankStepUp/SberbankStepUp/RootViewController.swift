@@ -32,7 +32,7 @@ final class RootViewController: UIViewController {
     }
     
     public func showMainScreen() {
-        let new = UINavigationController(rootViewController: ARViewController())
+        let new = UINavigationController(rootViewController: MainViewController())
         addChild(new)
         new.view.frame = view.bounds
         view.addSubview(new.view)
