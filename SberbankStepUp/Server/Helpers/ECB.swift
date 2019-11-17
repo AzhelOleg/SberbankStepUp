@@ -32,7 +32,11 @@ public final class ECB {
             let i = index
             index += 1
             let getListTask = session.dataTask(with: self.currencyListRequest(for: date)) { (data, response, error) in
-                guard let data = data else { return }
+                guard let data = data else {
+                    self.updateCurrencySegment()
+                    return
+                }
+                
                 do {
                     let list = try JSONDecoder().decode(CurrencyListDTO.self, from: data)
                     var currencyList = CurrencyList(dto: list)
