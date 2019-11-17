@@ -29,7 +29,7 @@ public class CollectionViewScreen: UIViewController {
         layout.minimumInteritemSpacing = 40
         let frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         let collectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
-		collectionView.backgroundColor = .white
+		collectionView.backgroundColor = .clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
 		collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.id)
 		collectionView.isPagingEnabled = true
@@ -45,7 +45,15 @@ public class CollectionViewScreen: UIViewController {
 		button.backgroundColor = .lightGray
 		button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 32)
 		button.clipsToBounds = true
-		button.layer.cornerRadius = 10
+		button.layer.cornerRadius = 30
+        
+        let gradient = GradientView()
+        gradient.update()
+        let backgroundLayer = gradient.gradientLayer
+        backgroundLayer.frame = button.bounds
+        let backView = UIView(frame: button.bounds)
+        backView.layer.addSublayer(backgroundLayer)
+        button.addSubview(backView)
 		return button
 	}()
 	
@@ -74,7 +82,15 @@ public class CollectionViewScreen: UIViewController {
 extension CollectionViewScreen {
 	override public func viewDidLoad() {
 		super.viewDidLoad()
-		view.backgroundColor = .white
+        view.backgroundColor = .clear
+        let gradient = GradientView()
+        gradient.update()
+        let backgroundLayer = gradient.gradientLayer
+        backgroundLayer.frame = view.bounds
+        let backView = UIView(frame: view.bounds)
+        backView.layer.addSublayer(backgroundLayer)
+        view.addSubview(backView)
+        
 		valueLabel.text = "You bought " + "\(value!)" + " \(data.last!.currency)\n" + " for " + "\(Int(data.last!.money))" + " RUB"
 		collectionLayout()
 		stackLayout()
@@ -135,6 +151,7 @@ extension CollectionViewScreen: UICollectionViewDelegateFlowLayout {
 extension CollectionViewScreen {
 	@objc
 	private func arSelector() {
-		present(ARViewController(data: data), animated: true, completion: nil)
+//        present(ARViewController(data: data), animated: true, completion: nil)
+        navigationController?.pushViewController(ARViewController(data: data), animated: true)
 	}
 }

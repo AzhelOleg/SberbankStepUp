@@ -137,7 +137,9 @@ final class GradientView: UIView {
         
     }
     
-    //    required init?(coder aDecoder: NSCoder) {
-    //        fatalError("init(coder:) has not been implemented")
-    //    }
+    func update(_ colorBottom: UIColor, _ colorTop: UIColor) {        
+        gradientLayer.colors = [colorBottom, colorTop].compactMap{ $0.cgColor }
+        gradientLayer.locations = [0.0, 1.0]
+        
+    }
 }

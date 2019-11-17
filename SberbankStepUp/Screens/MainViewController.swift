@@ -131,13 +131,15 @@ extension MainViewController {
 		//
         
         //
+        
         view.backgroundColor = .clear
         let gradient = GradientView()
         gradient.update()
         let backgroundLayer = gradient.gradientLayer
-        backgroundLayer.frame = view.frame
-        view.layer.insertSublayer(backgroundLayer, at: 0)
-
+        backgroundLayer.frame = view.bounds
+        let backView = UIView(frame: view.bounds)
+        backView.layer.addSublayer(backgroundLayer)
+        view.addSubview(backView)
         
 		self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutSelector))
 		//
@@ -238,9 +240,17 @@ extension UITextField {
 
 
 extension UIColor {
-	static var sberColor:UIColor {
-//		let color = UIColor(displayP3Red: 96, green: 156, blue: 65, alpha: 1)
-//		return color
-		return .green
+	static var sberColor: UIColor {
+		return UIColor(red: 3.0/255.0, green: 252.0/255.0, blue: 111.0/255.0, alpha: 1.0)
 	}
+    
+    static var lightBlue: UIColor {
+        return UIColor(red: 0.0 / 255.0, green: 213.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
+    }
+    static var lightPurple: UIColor {
+        return UIColor(red: 158.0 / 255.0, green: 122.0 / 255.0, blue: 196 / 255.0, alpha: 1.0)
+    }
+    static var darkPurple: UIColor {
+        return UIColor(red: 123 / 255.0, green: 80.0 / 255.0, blue: 171.0 / 255.0, alpha: 1.0)
+    }
 }
