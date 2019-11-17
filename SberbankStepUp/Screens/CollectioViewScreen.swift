@@ -35,13 +35,49 @@ public class CollectionViewScreen: UIViewController {
 		collectionView.isPagingEnabled = true
 		return collectionView
 	}()
+	
+	private let arButton: UIButton = {
+		let button = UIButton()
+		button.translatesAutoresizingMaskIntoConstraints = false
+		button.addTarget(self, action: #selector(arSelector), for: .touchUpInside)
+		button.titleLabel?.textAlignment = .center
+		button.setTitle("AR", for: .normal)
+		button.backgroundColor = .lightGray
+		button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 32)
+		button.clipsToBounds = true
+		button.layer.cornerRadius = 10
+		return button
+	}()
+	
+	private let valueLabel: UILabel = {
+		let label = UILabel()
+		label.clipsToBounds = true
+		label.translatesAutoresizingMaskIntoConstraints = false
+		label.layer.cornerRadius = 10
+		label.numberOfLines = 0
+		label.backgroundColor = .lightGray
+		label.textAlignment = .center
+		label.font = UIFont.boldSystemFont(ofSize: 32)
+		label.adjustsFontSizeToFitWidth = true
+		return label
+	}()
+	private let topStack: UIStackView = {
+		let stack = UIStackView()
+		stack.translatesAutoresizingMaskIntoConstraints = false
+		stack.spacing = 10
+		stack.axis = .vertical
+		stack.distribution = .fillEqually
+		return stack
+	}()
 }
 
 extension CollectionViewScreen {
 	override public func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = .white
+		valueLabel.text = "You bought " + "\(value!)" + " \(model.last!.currency)\n" + " for " + "\(Int(model.last!.money))" + " RUB"
 		collectionLayout()
+		stackLayout()
 	}
 	override public func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
@@ -61,6 +97,17 @@ extension CollectionViewScreen {
 		collectionView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 250).isActive = true
 		collectionView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
 		collectionView.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
+	}
+	
+	private func stackLayout() {
+		topStack.addArrangedSubview(arButton)
+		topStack.addArrangedSubview(valueLabel)
+		view.addSubview(topStack)
+		let margins = view.safeAreaLayoutGuide
+		topStack.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20).isActive = true
+		topStack.topAnchor.constraint(equalTo: margins.topAnchor, constant: 10).isActive = true
+		topStack.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -20).isActive = true
+		topStack.bottomAnchor.constraint(equalTo: collectionView.topAnchor, constant: 10).isActive = true
 	}
 }
 
@@ -83,4 +130,11 @@ extension CollectionViewScreen: UICollectionViewDelegateFlowLayout {
         let height = collectionView.bounds.height - 40
         return CGSize(width: width, height: height)
     }
+}
+
+extension CollectionViewScreen {
+	@objc
+	private func arSelector() {
+		
+	}
 }
